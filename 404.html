@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>PULSO</title>
+  <script>
+    // GitHub Pages: /pulso-demo/cuenta → /pulso-demo/#/cuenta (el sitio usa rutas con #)
+    (function () {
+      var parts = location.pathname.split('/').filter(Boolean);
+      var base = location.hostname.endsWith('github.io') && parts.length ? '/' + parts.shift() + '/' : '/';
+      location.replace(base + '#/' + parts.join('/') + location.search);
+    })();
+  </script>
+</head>
+<body></body>
+</html>
