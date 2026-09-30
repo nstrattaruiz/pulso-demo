@@ -18,7 +18,7 @@ export const render = () => `
           <path d="M60 140h200v130H60z" fill="#E3D5B6"/>
           <path d="M60 140 30 96h200l30 44z" fill="#CDBB96"/>
           <path d="M260 140l30-44h-60z" fill="#D9C9A8"/>
-          <circle cx="160" cy="200" r="22" fill="#6C4DFF"/>
+          <circle cx="160" cy="200" r="22" fill="#D1146E"/>
           <path d="M146 201h6l3-8 5 14 4-9 2 3h6" fill="none" stroke="#C7F36B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
         </g>
         <text class="pl-404__q" x="228" y="70" font-family="Unbounded, Arial Black, sans-serif" font-weight="800" font-size="64" fill="#FF6B5E">?</text>

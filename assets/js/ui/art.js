@@ -8,13 +8,13 @@
 import { esc } from './format.js';
 
 export const TONES = {
-  purple: { bg: '#6C4DFF', a: '#C7F36B', b: '#FFD84D', c: '#F7F5EF', ink: '#17171C' },
+  purple: { bg: '#D1146E', a: '#C7F36B', b: '#FFD84D', c: '#F7F5EF', ink: '#17171C' },
   blue: { bg: '#19B5FE', a: '#FF6B5E', b: '#FFD84D', c: '#F7F5EF', ink: '#17171C' },
-  coral: { bg: '#FF6B5E', a: '#6C4DFF', b: '#FFD84D', c: '#F7F5EF', ink: '#17171C' },
-  yellow: { bg: '#FFD84D', a: '#6C4DFF', b: '#FF6B5E', c: '#F7F5EF', ink: '#17171C' },
-  lime: { bg: '#C7F36B', a: '#6C4DFF', b: '#FF6B5E', c: '#F7F5EF', ink: '#17171C' },
-  dark: { bg: '#17171C', a: '#C7F36B', b: '#6C4DFF', c: '#FF6B5E', ink: '#F7F5EF' },
-  cream: { bg: '#EFEBE0', a: '#6C4DFF', b: '#19B5FE', c: '#FF6B5E', ink: '#17171C' },
+  coral: { bg: '#FF6B5E', a: '#D1146E', b: '#FFD84D', c: '#F7F5EF', ink: '#17171C' },
+  yellow: { bg: '#FFD84D', a: '#D1146E', b: '#FF6B5E', c: '#F7F5EF', ink: '#17171C' },
+  lime: { bg: '#C7F36B', a: '#D1146E', b: '#FF6B5E', c: '#F7F5EF', ink: '#17171C' },
+  dark: { bg: '#17171C', a: '#C7F36B', b: '#D1146E', c: '#FF6B5E', ink: '#F7F5EF' },
+  cream: { bg: '#EFEBE0', a: '#D1146E', b: '#19B5FE', c: '#FF6B5E', ink: '#17171C' },
 };
 
 const DARK = '#17171C';
@@ -164,7 +164,7 @@ const packaging = (p, t) => `
   <path d="M210 250 L300 206 V376 L210 420Z" fill="#DCD6C8"/>
   <path d="M110 210 L210 250 V420 L110 380Z" fill="${t.c === '#F7F5EF' ? '#F7F5EF' : '#fff'}"/>
   <g transform="matrix(1 .4 0 1 110 210)">
-    <circle cx="50" cy="52" r="24" fill="#6C4DFF"/>
+    <circle cx="50" cy="52" r="24" fill="#D1146E"/>
     <path d="M34 53 h8 l4-10 6 18 4-12 3 4 h9" fill="none" stroke="#C7F36B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     <text x="50" y="106" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="20" fill="${DARK}">PULSO</text>
     <text x="50" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" letter-spacing="1" fill="${DARK}">${esc(p.name.toUpperCase())}</text>
@@ -212,15 +212,15 @@ export const shapeImage = (shape, tone = 'purple', { plain = false } = {}) => {
 const box = (x, y, w, h, c = '#D9C9A8', logo = true) => `
   <rect x="${x}" y="${y}" width="${w}" height="${h}" rx="4" fill="${c}"/>
   <rect x="${x}" y="${y + h / 2 - 5}" width="${w}" height="10" fill="#000" opacity=".08"/>
-  ${logo ? `<circle cx="${x + w / 2}" cy="${y + h / 2 - 20}" r="${Math.min(w, h) / 7}" fill="#6C4DFF"/>` : ''}`;
+  ${logo ? `<circle cx="${x + w / 2}" cy="${y + h / 2 - 20}" r="${Math.min(w, h) / 7}" fill="#D1146E"/>` : ''}`;
 
 const SCENES = {
-  productos: () => wrap('#6C4DFF', `<g transform="translate(-40 -40) scale(.6)">${SHAPES.lamp(TONES.purple)}</g><g transform="translate(160 -30) scale(.6)">${SHAPES.mug(TONES.purple)}</g><g transform="translate(-40 190) scale(.6)">${SHAPES.sticky(TONES.purple)}</g><g transform="translate(160 190) scale(.6)">${SHAPES.giftbox(TONES.purple)}</g>`),
+  productos: () => wrap('#D1146E', `<g transform="translate(-40 -40) scale(.6)">${SHAPES.lamp(TONES.purple)}</g><g transform="translate(160 -30) scale(.6)">${SHAPES.mug(TONES.purple)}</g><g transform="translate(-40 190) scale(.6)">${SHAPES.sticky(TONES.purple)}</g><g transform="translate(160 190) scale(.6)">${SHAPES.giftbox(TONES.purple)}</g>`),
   packaging: () => wrap('#FFD84D', `<ellipse cx="200" cy="420" rx="150" ry="16" fill="#000" opacity=".15"/>${box(90, 300, 130, 110)}${box(210, 320, 110, 90, '#CDBB96')}${box(130, 200, 120, 100, '#E3D5B6')}
     <path d="M150 190 C170 150 220 150 240 190" stroke="#FF6B5E" stroke-width="10" fill="none"/>
     <text x="200" y="110" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="30" fill="#17171C">PULSO</text>`),
-  deposito: () => wrap('#17171C', `${[140, 270, 400].map((y) => `<rect x="30" y="${y}" width="340" height="10" fill="#6C4DFF"/>`).join('')}
-    <rect x="30" y="20" width="10" height="400" fill="#6C4DFF"/><rect x="360" y="20" width="10" height="400" fill="#6C4DFF"/>
+  deposito: () => wrap('#17171C', `${[140, 270, 400].map((y) => `<rect x="30" y="${y}" width="340" height="10" fill="#D1146E"/>`).join('')}
+    <rect x="30" y="20" width="10" height="400" fill="#D1146E"/><rect x="360" y="20" width="10" height="400" fill="#D1146E"/>
     ${[[50, 70], [130, 80], [220, 60], [290, 70]].map(([x, h]) => box(x, 140 - h, 66, h, '#D9C9A8')).join('')}
     ${[[50, 90], [140, 70], [230, 100]].map(([x, h]) => box(x, 270 - h, 76, h, '#CDBB96')).join('')}
     ${[[60, 80], [160, 90], [260, 70]].map(([x, h]) => box(x, 400 - h, 80, h, '#E3D5B6')).join('')}
@@ -229,7 +229,7 @@ const SCENES = {
     <path d="M60 300 H300 V420 H60Z" fill="#CDBB96"/><path d="M60 300 L20 250 H260 L300 300Z" fill="#E3D5B6"/>
     <g transform="translate(40 -90) scale(.55)">${SHAPES.candle(TONES.lime)}</g><g transform="translate(130 -100) scale(.55)">${SHAPES.bottle(TONES.lime)}</g>
     <rect x="248" y="90" width="120" height="160" rx="10" fill="#fff" transform="rotate(8 308 170)"/>
-    ${[0, 1, 2, 3].map((i) => `<g transform="rotate(8 308 170)"><path d="M266 ${126 + i * 30} l6 6 10-12" stroke="#6C4DFF" stroke-width="4" fill="none" stroke-linecap="round"/><rect x="290" y="${122 + i * 30}" width="60" height="8" rx="4" fill="#17171C" opacity=".2"/></g>`).join('')}`),
+    ${[0, 1, 2, 3].map((i) => `<g transform="rotate(8 308 170)"><path d="M266 ${126 + i * 30} l6 6 10-12" stroke="#D1146E" stroke-width="4" fill="none" stroke-linecap="round"/><rect x="290" y="${122 + i * 30}" width="60" height="8" rx="4" fill="#17171C" opacity=".2"/></g>`).join('')}`),
 };
 
 export const sceneImage = (name) => {
