@@ -21,7 +21,7 @@ export const render = () => `
           <circle cx="160" cy="200" r="22" fill="#6C4DFF"/>
           <path d="M146 201h6l3-8 5 14 4-9 2 3h6" fill="none" stroke="#C7F36B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
         </g>
-        <text class="pl-404__q" x="228" y="70" font-family="Bricolage Grotesque, Arial Black, sans-serif" font-weight="800" font-size="64" fill="#FF6B5E">?</text>
+        <text class="pl-404__q" x="228" y="70" font-family="Unbounded, Arial Black, sans-serif" font-weight="800" font-size="64" fill="#FF6B5E">?</text>
         <circle class="pl-404__dot" cx="70" cy="60" r="12" fill="#FFD84D"/>
         <rect class="pl-404__dot" x="120" y="30" width="18" height="18" rx="4" fill="#19B5FE" transform="rotate(18 129 39)"/>
       </svg>

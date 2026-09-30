@@ -40,8 +40,8 @@
   --ease: cubic-bezier(.22, 1, .36, 1);
   --ease-back: cubic-bezier(.34, 1.56, .64, 1);
 
-  --font-display: 'Bricolage Grotesque', 'Inter', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Unbounded', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   --container: 1320px;
   --gutter: clamp(16px, 4vw, 40px);
@@ -116,13 +116,13 @@ html.is-switching #app { animation: pl-switch .6s var(--ease); }
 .pl-h1, .pl-h2, .pl-display {
   font-family: var(--font-display);
   font-weight: 800;
-  letter-spacing: -.03em;
-  line-height: .98;
+  letter-spacing: -.035em;
+  line-height: 1.02;
   text-wrap: balance;
 }
-.pl-h1 { font-size: clamp(2.5rem, 6.2vw, 5.2rem); }
-.pl-h2 { font-size: clamp(2rem, 4.4vw, 3.6rem); }
-.pl-h2--xl { font-size: clamp(2.4rem, 6vw, 5rem); }
+.pl-h1 { font-size: clamp(2.1rem, 4.8vw, 4rem); }
+.pl-h2 { font-size: clamp(1.7rem, 3.4vw, 2.8rem); }
+.pl-h2--xl { font-size: clamp(1.9rem, 4.4vw, 3.7rem); }
 .pl-lead { font-size: clamp(1.05rem, 1.4vw, 1.25rem); color: var(--ink-2); max-width: 56ch; margin-top: 16px; text-wrap: pretty; }
 .pl-muted { color: var(--ink-3); font-size: .9rem; }
 .pl-eyebrow {
@@ -273,7 +273,7 @@ html.is-switching #app { animation: pl-switch .6s var(--ease); }
 .pl-form { display: grid; gap: 18px; }
 .pl-form--grid { grid-template-columns: 1fr 1fr; gap: 16px 18px; }
 .pl-form--grid .pl-field--full, .pl-form--grid .pl-form__title { grid-column: 1 / -1; }
-.pl-form__title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; letter-spacing: -.02em; margin-bottom: 4px; }
+.pl-form__title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; letter-spacing: -.02em; margin-bottom: 4px; }
 .pl-field { display: grid; gap: 6px; align-content: start; }
 .pl-field > label { font-size: .85rem; font-weight: 600; }
 .pl-field > label small { font-weight: 400; color: var(--ink-3); }

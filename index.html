@@ -12,7 +12,7 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/ns-firma.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/components.css">
@@ -53,23 +53,29 @@
       <div class="pl-actions" id="pl-actions"></div>
     </div>
 
-    <div class="ns-panel" id="ns-panel" aria-hidden="true">
+    <!-- Menú grande: comportamiento de la firma NS, diseño propio de PULSO (3 columnas, categorías en tarjetas) -->
+    <div class="ns-panel pl-menu" id="ns-panel" aria-hidden="true">
       <nav class="ns-panel__nav" aria-label="Menú">
-        <a href="#/catalogo"><small>01</small>Catálogo</a>
-        <a href="#/categorias"><small>02</small>Categorías</a>
-        <a href="#/novedades"><small>03</small>Novedades</a>
-        <a href="#/como-comprar"><small>04</small>Cómo comprar</a>
-        <a href="#/nosotros"><small>05</small>Nosotros</a>
-        <div class="pl-panel-subs">
-          <a href="#/catalogo?cat=hogar">Hogar</a><a href="#/catalogo?cat=lifestyle">Lifestyle</a><a href="#/catalogo?cat=regalos">Regalos</a><a href="#/catalogo?cat=papeleria">Papelería</a><a href="#/catalogo?cat=accesorios">Accesorios</a>
-        </div>
+        <a href="#/catalogo"><small>01</small><span>Catálogo</span><i class="pl-menu__go" aria-hidden="true"></i></a>
+        <a href="#/categorias"><small>02</small><span>Categorías</span><i class="pl-menu__go" aria-hidden="true"></i></a>
+        <a href="#/novedades"><small>03</small><span>Novedades</span><i class="pl-menu__go" aria-hidden="true"></i></a>
+        <a href="#/como-comprar"><small>04</small><span>Cómo comprar</span><i class="pl-menu__go" aria-hidden="true"></i></a>
+        <a href="#/nosotros"><small>05</small><span>Nosotros</span><i class="pl-menu__go" aria-hidden="true"></i></a>
       </nav>
-      <div class="ns-panel__info">
+      <div class="pl-menu__cats">
+        <p class="ns-panel__label">Categorías</p>
+        <div class="pl-menu__grid" id="pl-menu-cats"></div>
+      </div>
+      <div class="ns-panel__info pl-menu__side">
+        <a class="pl-menu__promo" href="#/novedades" id="pl-menu-promo">
+          <span class="pl-menu__promo-tag">Recién llegado</span>
+          <strong>Nueva colección primavera</strong>
+          <span class="pl-menu__promo-link">Ver novedades</span>
+        </a>
         <p class="ns-panel__label">Hablemos</p>
         <a href="tel:+59800000000"><svg aria-hidden="true" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M5 3h3.5l1.7 4.3-2.2 1.4a11 11 0 0 0 7.3 7.3l1.4-2.2L21 15.5V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>0000 0000</a>
         <a href="#/" data-action="social"><svg aria-hidden="true" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.2-3.8A8 8 0 1 1 8 19.1z"/><path d="M9.2 8.6c.2-.4.5-.4.8-.4h.4l.9 2-.6.9c.5 1 1.3 1.8 2.3 2.3l.9-.6 2 .9v.4c0 .3 0 .6-.4.8-.9.6-2.3.4-4-.8a9 9 0 0 1-2.8-3.1c-.7-1.4-.1-2.1.5-2.4z"/></g></svg>099 000 000</a>
         <a href="mailto:hola@pulso.demo"><svg aria-hidden="true" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></g></svg>hola@pulso.demo</a>
-        <p><svg aria-hidden="true" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></g></svg>Depósito · Montevideo</p>
         <a class="pl-btn pl-btn--lime pl-btn--sm" href="#/registro">Solicitar cuenta mayorista</a>
       </div>
     </div>

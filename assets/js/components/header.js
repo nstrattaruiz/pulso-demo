@@ -6,6 +6,8 @@
 import { user, cartCount, on, logout } from '../store.js';
 import { icon } from '../ui/icons.js';
 import { toast } from '../ui/toast.js';
+import { shapeImage } from '../ui/art.js';
+import { CATEGORIES, productsIn } from '../data/products.js';
 import { $, $$ } from '../ui/format.js';
 
 const slot = () => $('#pl-actions');
@@ -93,7 +95,23 @@ export const setActiveNav = (path) => {
   });
 };
 
+/** Menú grande: tarjetas de categorías con su color e ilustración, y la novedad destacada. */
+const renderMenu = () => {
+  const grid = $('#pl-menu-cats');
+  if (grid) {
+    grid.innerHTML = CATEGORIES.map((c, i) => `
+      <a class="pl-menu__cat pl-cat--${c.tone}" href="${c.virtual ? '#/novedades' : `#/catalogo?cat=${c.slug}`}" style="--i:${i}">
+        <img src="${shapeImage(c.hero, c.tone === 'purple' ? 'cream' : c.tone, { plain: true })}" alt="" width="400" height="500" loading="lazy">
+        <strong>${c.name}</strong>
+        <span>${productsIn(c.slug).length} productos</span>
+      </a>`).join('');
+  }
+  const promo = $('#pl-menu-promo');
+  promo?.insertAdjacentHTML('afterbegin', `<img src="${shapeImage('lamp', 'blue')}" alt="" width="400" height="500" loading="lazy">`);
+};
+
 export const initHeader = () => {
+  renderMenu();
   renderHeader();
   on('auth', renderHeader);
   on('cart', () => updateCount());
